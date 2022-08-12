@@ -15,6 +15,7 @@ const App = () => {
 
   const app = new Application({
     backgroundColor: 0x5bba6f,
+    // backgroundColor: 0xcccccc,
     height: 600,
     width: 800,
   });
@@ -38,7 +39,7 @@ const App = () => {
   const skewText = new Text('Hello World', skewStyle);
   skewText.skew.set(0.65, -0.3);
   skewText.anchor.set(0.5, 0.5);
-  skewText.x = 200;
+  skewText.x = 500;
   skewText.y = 500;
 
   app.stage.addChild(skewText);
@@ -49,7 +50,7 @@ const App = () => {
 
   const texture = Texture.from(Bunny);
 
-  for (let i = 0; i < 25; i++) {
+  for (let i = 0; i < 25; i += 1) {
     const rabbit = new Sprite(texture);
 
     rabbit.anchor.set(0.5);
@@ -59,8 +60,8 @@ const App = () => {
     container.addChild(rabbit);
   }
 
-  container.x = app.screen.width / 2;
-  container.y = app.screen.height / 2.5;
+  container.x = app.screen.width / 4;
+  container.y = app.screen.height / 3;
 
   container.pivot.x = container.width / 2;
   container.pivot.y = container.height / 2;
